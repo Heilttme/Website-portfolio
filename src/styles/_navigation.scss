@@ -2,4 +2,29 @@ header{
     position: fixed;
     height: 100vh;
     background-color: #242323;
+
+    nav{
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            li{
+                list-style: none;
+                margin-top: 1.2rem;
+
+                a{
+                    text-decoration: none;
+                    width: 80%;
+                    color: #a6a6a6;
+                    display: inline-block;
+                    padding: 1rem auto;
+                    border-bottom: 1px solid rgba(140, 140, 140, .4);
+                    border-top: 1px solid rgba(140, 140, 140, .4);
+                }
+            }
+        }
+    }
 }
+

@@ -13,7 +13,100 @@ export default function Home(props) {
             <div className="introduction">
                 <div className="speech">
                     <h2>Hi, I'm</h2>
-                    <h1>Nikita Sorokin</h1>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>N</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>i</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>k</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>i</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>t</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>a</span>
+                            </span>
+                        </span>
+                    </span>
+
+                        <strong> </strong>
+
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>S</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>o</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>r</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>o</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>k</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>i</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span className="name">
+                        <span className="scale">
+                            <span className="translate">
+                                <span>n</span>
+                            </span>
+                        </span>
+                    </span>
                     <h2>UI/UX Designer, Web Developer</h2>
                     <p>I design and code things simple and beautiful</p>
                     <Link to="/contact">Contact me</Link>

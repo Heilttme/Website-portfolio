@@ -22,6 +22,8 @@ main{
     width: 100%;
 }
 
+
+
 .home{
     width: 100%;
 
@@ -32,10 +34,30 @@ main{
         width: 85%;
 
         .speech{
-            h1{
+            .name{
                 color: #2aa1ff;
                 font-size: 4em;
                 font-weight: 1000;
+
+                span{
+                    display: inline-block;
+                }
+
+                .translate{
+                    transition: transform .8s cubic-bezier(.4,1.71,1,2.5);
+                    
+                    &:hover{
+                        transform: translateY(-16px);
+                    }
+                }
+
+                .scale{
+                    transition: transform .8s ease-out;
+                    
+                    &:hover{
+                        transform: scaleY(.7);
+                    }
+                }
             }
         
             h2{
@@ -52,6 +74,7 @@ main{
                 display: inline-block;
                 margin-top: 1rem;
             }
+            
         }
 
         img{
@@ -121,4 +144,14 @@ main{
         }
     }
 
+}
+
+
+@keyframes name-animation {
+    0%{
+        transform: translateY(-7px);
+    }
+    100%{
+        transform: translateY(7px);
+    }
 }

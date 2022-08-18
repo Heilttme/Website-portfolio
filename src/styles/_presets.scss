@@ -10,4 +10,11 @@ html, body, *{
     background-color: #00b33c;
     text-decoration: none;
     color: white;
+    transition: color .3s ease-in-out, box-shadow .5s ease-in;
+
+    &:hover {
+              box-shadow: inset 130px 0 0 0 #54b3d6;
+              color: white;
+            }
 }
+

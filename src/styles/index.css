@@ -9,6 +9,24 @@ header {
   height: 100vh;
   background-color: #242323;
 }
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+header nav ul li {
+  list-style: none;
+  margin-top: 1.2rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  width: 80%;
+  color: #a6a6a6;
+  display: inline-block;
+  padding: 1rem auto;
+  border-bottom: 1px solid rgba(140, 140, 140, 0.4);
+  border-top: 1px solid rgba(140, 140, 140, 0.4);
+}
 
 body {
   background-color: #1a1a1a;
@@ -39,10 +57,25 @@ main {
   margin-top: 4rem;
   width: 85%;
 }
-.home .introduction .speech h1 {
+.home .introduction .speech .name {
   color: #2aa1ff;
   font-size: 4em;
   font-weight: 1000;
+}
+.home .introduction .speech .name span {
+  display: inline-block;
+}
+.home .introduction .speech .name .translate {
+  transition: transform 0.8s cubic-bezier(0.4, 1.71, 1, 2.5);
+}
+.home .introduction .speech .name .translate:hover {
+  transform: translateY(-16px);
+}
+.home .introduction .speech .name .scale {
+  transition: transform 0.8s ease-out;
+}
+.home .introduction .speech .name .scale:hover {
+  transform: scaleY(0.7);
 }
 .home .introduction .speech h2 {
   font-size: 2em;
@@ -57,8 +90,13 @@ main {
   background-color: #00b33c;
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in;
   display: inline-block;
   margin-top: 1rem;
+}
+.home .introduction .speech a:hover {
+  box-shadow: inset 130px 0 0 0 #54b3d6;
+  color: white;
 }
 .home .introduction img {
   width: 300px;
@@ -113,6 +151,29 @@ main {
   background-color: #00b33c;
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in;
   display: inline-block;
   margin-top: 2rem;
+}
+.home .about .right-col a:hover {
+  box-shadow: inset 130px 0 0 0 #54b3d6;
+  color: white;
+}
+
+@-webkit-keyframes name-animation {
+  0% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes name-animation {
+  0% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(7px);
+  }
 }/*# sourceMappingURL=index.css.map */
