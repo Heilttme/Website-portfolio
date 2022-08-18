@@ -1,0 +1,118 @@
+html, body, * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  height: 100vh;
+  background-color: #242323;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: Nunito;
+}
+
+.app {
+  display: flex;
+}
+
+header {
+  width: 10rem;
+}
+
+main {
+  margin-left: 10rem;
+  padding: 2rem 6rem;
+  width: 100%;
+}
+
+.home {
+  width: 100%;
+}
+.home .introduction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  width: 85%;
+}
+.home .introduction .speech h1 {
+  color: #2aa1ff;
+  font-size: 4em;
+  font-weight: 1000;
+}
+.home .introduction .speech h2 {
+  font-size: 2em;
+}
+.home .introduction .speech p {
+  margin-top: 1rem;
+  font-size: 1.3em;
+}
+.home .introduction .speech a {
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  background-color: #00b33c;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.home .introduction img {
+  width: 300px;
+}
+.home .bottom-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.home .about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10rem;
+  margin-top: 8rem;
+}
+.home .about .left-col {
+  padding: 1.5rem;
+  background-color: #2aa1ff;
+  border-radius: 12px;
+}
+.home .about .left-col h1 {
+  margin-bottom: 0.6rem;
+}
+.home .about .left-col p {
+  margin-top: 0.4rem;
+  font-size: 1.2em;
+}
+.home .about .right-col {
+  width: 100%;
+  text-align: center;
+}
+.home .about .right-col .cards {
+  display: flex;
+  justify-content: space-between;
+}
+.home .about .right-col .cards .card {
+  width: 90%;
+  text-align: center;
+}
+.home .about .right-col .cards .card img {
+  width: 70px;
+}
+.home .about .right-col .cards .card .smartphone {
+  transition: all 0.3s ease-in-out;
+}
+.home .about .right-col .cards .card .smartphone:hover {
+  transform: rotate(-90deg);
+}
+.home .about .right-col a {
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  background-color: #00b33c;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-top: 2rem;
+}/*# sourceMappingURL=index.css.map */

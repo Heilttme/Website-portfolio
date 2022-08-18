@@ -1,0 +1,124 @@
+@import './presets';
+@import "./navigation";
+
+
+body{
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Nunito;
+}
+
+.app{
+    display: flex;
+}
+
+header{
+    width: 10rem;
+}
+
+main{
+    margin-left: 10rem;
+    padding: 2rem 6rem;
+    width: 100%;
+}
+
+.home{
+    width: 100%;
+
+    .introduction{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4rem;
+        width: 85%;
+
+        .speech{
+            h1{
+                color: #2aa1ff;
+                font-size: 4em;
+                font-weight: 1000;
+            }
+        
+            h2{
+                font-size: 2em;
+            }
+        
+            p{
+                margin-top: 1rem;
+                font-size: 1.3em;
+            }
+            
+            a{
+                @include button-style;
+                display: inline-block;
+                margin-top: 1rem;
+            }
+        }
+
+        img{
+            width: 300px;
+        }   
+    }
+
+    .bottom-img{
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 10rem;
+        margin-top: 8rem;
+
+        .left-col{
+            padding: 1.5rem;
+            background-color: #2aa1ff;
+            border-radius: 12px;
+    
+            h1{
+                margin-bottom: .6rem;
+            }
+    
+            p{
+                margin-top: .4rem;
+                font-size: 1.2em;
+            }
+        }
+
+        .right-col{
+            width: 100%;
+            text-align: center;
+
+            .cards{
+                display: flex;
+                justify-content: space-between;
+
+                .card{
+                    width: 90%;
+                    text-align: center;
+
+                    img{
+                        width: 70px;
+                    }
+
+                    .smartphone{
+                        transition: all .3s ease-in-out;
+    
+                        &:hover{
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+
+            }
+
+            a{
+                @include button-style;
+                display: inline-block;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+}
