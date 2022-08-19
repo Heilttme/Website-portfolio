@@ -1,0 +1,132 @@
+.skills{
+    @for $i from 1 through 3 {
+        .cards .card:nth-child(#{$i}n){
+            animation: appear 1s ease both;
+            animation-delay: #{$i * 0.4}s;
+        }
+    }
+
+    .cards{
+        margin: 4rem auto;
+        display: flex;
+        justify-content: space-around;
+
+        @mixin hidden-text{
+            position: absolute;
+            font-size: 1.1em;
+            top: 2rem;
+            left: 1rem;
+            opacity: 0;
+            transition: all .5s .1s ease-in;
+            line-height: 1.7rem;
+        }
+
+        .hidden-text-1{
+            @include hidden-text;
+        }
+        .hidden-text-2{
+            @include hidden-text;
+        }
+        .hidden-text-3{
+            @include hidden-text;
+        }
+
+        .card{
+            transition: all .5s ease-in-out;
+
+            text-align: center;
+            padding: 3rem 1rem;
+            border-radius: 12px;
+            background-color: #242323;
+            width: 25%;
+            
+            .image-container{
+                width: 100%;
+                
+                img{
+                    width: 130px;
+                    margin-bottom: 1rem;
+                }
+
+                h1{
+                    width: 100%;
+                    padding-bottom: 1.5rem;
+                    margin-bottom: 1rem;
+                    border-bottom: 1px solid rgba(140, 140, 140, .4);
+                }
+            }
+
+            .skills-container{
+                position: relative;
+            
+                ul{
+                    transition: all .5s .1s ease-out;
+                    
+                    li{
+                        list-style: none;
+                        padding: .4rem;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+
+        .card:first-child{
+            &:hover{
+                transform: scale(1.1);
+                
+                ul{
+                    opacity: 0;
+                }
+
+                .hidden-text-1{
+                    opacity: 1;
+                }
+            }
+
+            .image-container{
+                img{
+                    margin-bottom: 1.7rem;
+                }
+            }
+
+            .skills-container{
+                ul{
+                    li:nth-child(5){
+                        border-bottom: 1px solid rgba(140, 140, 140, .4);
+                        margin-bottom: 1rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        .card:nth-child(2){
+            &:hover{
+                transform: scale(1.1);
+                
+                ul{
+                    opacity: 0;
+                }
+
+                .hidden-text-2{
+                    opacity: 1;
+                }
+            }
+        }
+        
+        .card:nth-child(3){
+            &:hover{
+                transform: scale(1.1);
+                
+                ul{
+                    opacity: 0;
+                }
+
+                .hidden-text-3{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

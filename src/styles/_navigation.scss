@@ -3,25 +3,66 @@ header{
     height: 100vh;
     background-color: #242323;
 
-    nav{
+    .logo{
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 1rem;
+        width: 95%;
+        text-align: center;
+        margin-top: 1.6rem;
+        font-size: 1.4em;
+        transition: all .6s ease-in-out;
 
-        ul{
-            display: flex;
-            flex-direction: column;
+        &:hover{
+            color:#54b3d6;
+        }
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 95%;
+
+        .nav{
             text-align: center;
 
             li{
                 list-style: none;
-                margin-top: 1.2rem;
+                margin-top: 2rem;
+
+                .active{
+                    box-shadow: inset 130px 0 0 0 #54b3d6;
+                    color: white;
+                }
 
                 a{
                     text-decoration: none;
                     width: 80%;
                     color: #a6a6a6;
                     display: inline-block;
-                    padding: 1rem auto;
-                    border-bottom: 1px solid rgba(140, 140, 140, .4);
-                    border-top: 1px solid rgba(140, 140, 140, .4);
+                    padding-block: .75rem;
+                    border-block: 1px solid rgba(140, 140, 140, .4);
+                    @include button-style-hover(#54b3d6, .5s);
+                }
+            }
+        }
+
+        .icons{
+            text-align: center;
+            height: 25%;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .filter-green{
+                transition: all .4s ease-in-out;
+
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(335deg) brightness(103%) contrast(102%);
+                &:hover{
+                    filter: invert(20%) sepia(40%) saturate(673%) hue-rotate(175deg) brightness(97%) contrast(87%);
                 }
             }
         }

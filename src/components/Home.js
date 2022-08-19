@@ -133,7 +133,7 @@ export default function Home(props) {
                         <div className="card">
                             <img className="smartphone" src={smartphone}/>
                             <h2>Responsive design</h2>
-                            <p>Responsive web design for all platform</p>
+                            <p>Responsive web design for all platforms</p>
                         </div>
                         <div className="card">
                             <img src={server}/>

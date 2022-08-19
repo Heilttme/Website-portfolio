@@ -1,8 +1,16 @@
 @import './presets';
 @import "./navigation";
+@import "./skills";
+@import "./projects";
+@import "./contact";
 
+
+li{
+    list-style: none;
+}
 
 body{
+    animation: appear 3s ease-in-out;
     background-color: #1a1a1a;
     color: white;
     font-family: Nunito;
@@ -21,8 +29,6 @@ main{
     padding: 2rem 6rem;
     width: 100%;
 }
-
-
 
 .home{
     width: 100%;
@@ -144,14 +150,4 @@ main{
         }
     }
 
-}
-
-
-@keyframes name-animation {
-    0%{
-        transform: translateY(-7px);
-    }
-    100%{
-        transform: translateY(7px);
-    }
 }

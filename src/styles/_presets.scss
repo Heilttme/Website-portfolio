@@ -10,11 +10,24 @@ html, body, *{
     background-color: #00b33c;
     text-decoration: none;
     color: white;
-    transition: color .3s ease-in-out, box-shadow .5s ease-in;
+    @include button-style-hover(#54b3d6, .5s)
+}
+
+@mixin button-style-hover($color, $duration){
+    transition: color .3s ease-in-out, box-shadow $duration ease-in;
 
     &:hover {
-              box-shadow: inset 130px 0 0 0 #54b3d6;
+              box-shadow: inset 130px 0 0 0 $color;
               color: white;
             }
 }
 
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
