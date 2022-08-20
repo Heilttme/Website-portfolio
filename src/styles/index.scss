@@ -18,6 +18,44 @@ body{
 
 .app{
     display: flex;
+    position: relative;
+
+    .wrapper-hamburger{
+        cursor: pointer;
+        padding: 1rem;
+        position: fixed;
+        right: 2rem;
+        top: 2rem;
+        z-index: 1000000;
+        display: none;
+        
+        .hamburger-menu{
+            width: 28px;
+            height: 3px;
+            background-color: white;
+            border-radius: 8px;
+        
+            &::after{
+                content: '';
+                position: absolute;
+                width: 23px;
+                height: 3px;
+                top: 24px;
+                background-color: white;
+                border-radius: 8px;
+            }
+            
+            &::before{
+                content: '';
+                position: absolute;
+                width: 28px;
+                height: 3px;
+                top: 8px;
+                background-color: white;
+                border-radius: 8px;
+            }
+        }
+    }
 }
 
 header{
@@ -58,11 +96,13 @@ main{
         }
 
         .full-name .animated{
+            -webkit-animation: sk .6s cubic-bezier(.09,1.9,.81,1.9);
             animation: sk .6s cubic-bezier(.09,1.9,.81,1.9);
         }
 
         @for $i from 1 through 20 {
-            .full-name .name:nth-child(#{$i}) {
+            .full-name .name:nth-child(#{$i}) { 
+                -webkit-animation-delay:(#{$i*0.07s + .7s});
                 animation-delay:(#{$i*0.07s + .7s}); 
             }
         }
@@ -169,4 +209,13 @@ main{
         }
     }
 
+}
+
+
+@media (max-width: 1200px) {
+    .app{
+        .wrapper-hamburger{
+            display: block;
+        }
+    }
 }

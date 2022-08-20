@@ -2,6 +2,8 @@ header{
     position: fixed;
     height: 100vh;
     background-color: #242323;
+    transition: all .6s ease-in-out;
+    z-index: 100;
 
     .logo{
         text-decoration: none;
@@ -100,7 +102,7 @@ header{
                 height: 30px;
 
                 .ball{
-                    transition: all .2s ease-in-out;
+                    transition: all .4s ease-in-out;
                     position: absolute;
                     top: 3px;
                     left: 5px;
@@ -125,3 +127,44 @@ header{
     }
 }
 
+@media (max-width: 1200px) {
+    .closed{
+        transform: translateX(-100%);
+    }
+
+    .opened{
+        width: 100vw;
+
+        .logo{
+            width: 100%;
+        }
+
+        .nav{
+            width: 50%;
+            margin: 0 auto;
+            
+            li{
+                width: 100%;
+            
+                .active{
+                    box-shadow: inset 500px 0 0 0 #54b3d6;
+                    color: white;
+                }
+
+                a{
+                    text-decoration: none;
+                    width: 80%;
+                    color: #a6a6a6;
+                    display: inline-block;
+                    padding-block: .75rem;
+                    border-block: 1px solid rgba(140, 140, 140, .4);
+                    @include button-style-hover(#54b3d6, .5s, 500px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    
+}

@@ -6,7 +6,7 @@ import telegram from '../images/telegram.svg'
 import github from '../images/github.svg'
 import linkedin from '../images/linkedin.svg'
 
-export default function Navigation() {
+export default function Navigation(props) {
     const {language, setLanguage} = useContext(AppContext)
     const switchRef = useRef(null)
 
@@ -20,9 +20,10 @@ export default function Navigation() {
         }
     }
 
+
     if (language === 'ru-RU') {
         return (
-            <header>
+            <header className={props.menuOpened ? "opened" : "closed"}>
                 <Link to="/" className="logo">@Heilttme</Link>
                 <nav>
                     <ul className="nav">
@@ -46,7 +47,7 @@ export default function Navigation() {
         )
     } else {
         return (
-            <header>
+            <header className={props.menuOpened ? "opened" : "closed"}>
                 <Link to="/" className="logo">@Heilttme</Link>
                 <nav>
                     <ul className="nav">

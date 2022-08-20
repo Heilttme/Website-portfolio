@@ -11,12 +11,17 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 function App() {
   const [language, setLanguage] = useState(navigator.language || navigator.userLanguage)
+  const [menuOpened, toggleMenu] = useState(false)
+  
 
   return (
     <AppContextProvider value={{language, setLanguage}}>
       <Router>
         <div className="app">
-            <Navigation/>
+            <div onClick={() => toggleMenu(prev => !prev)} class="wrapper-hamburger">
+                <div class="hamburger-menu"></div>
+            </div>
+            <Navigation menuOpened={menuOpened}/>
           <main>
             <Routes>
               <Route path="/" element={<Home/>} />
