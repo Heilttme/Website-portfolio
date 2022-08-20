@@ -72,8 +72,8 @@ header nav .nav li a:hover {
 }
 header nav .icons {
   text-align: center;
-  height: 25%;
-  margin-bottom: 3rem;
+  height: 40%;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,6 +84,48 @@ header nav .icons .filter-green {
 }
 header nav .icons .filter-green:hover {
   filter: invert(20%) sepia(40%) saturate(673%) hue-rotate(175deg) brightness(97%) contrast(87%);
+}
+header nav .switch-language-wrapper {
+  width: 100%;
+  height: 40px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+header nav .switch-language-wrapper::after {
+  content: "RU";
+  margin: 0.5rem;
+}
+header nav .switch-language-wrapper::before {
+  content: "EN";
+  margin: 0.5rem;
+}
+header nav .switch-language-wrapper:hover {
+  transform: scale(1.02);
+}
+header nav .switch-language-wrapper .switch {
+  position: relative;
+  background: transparent;
+  border-radius: 24px;
+  border: rgb(39, 50, 70) 2px solid;
+  width: 60px;
+  height: 30px;
+}
+header nav .switch-language-wrapper .switch .ball {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #54b3d6;
+}
+header nav .toggled .switch .ball {
+  left: 30px;
 }
 
 .skills .cards .card:nth-child(1n) {
@@ -204,6 +246,129 @@ header nav .icons .filter-green:hover {
   opacity: 1;
 }
 
+.projects {
+  margin-top: 3rem;
+}
+.projects .cards .card:nth-child(1n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.projects .cards .card:nth-child(2n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.projects .cards .card:nth-child(3n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.projects .cards .card:nth-child(4n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.projects .cards .card:nth-child(5n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.projects .cards .card:nth-child(6n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.projects .cards .card:nth-child(7n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.projects .cards .card:nth-child(8n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.projects .cards .card:nth-child(9n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.projects .cards .card:nth-child(10n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.projects .cards .card:nth-child(11n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+.projects .cards .card:nth-child(12n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+.projects .cards .card:nth-child(13n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
+}
+.projects .cards .card:nth-child(14n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s;
+}
+.projects .cards .card:nth-child(15n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+.projects .cards .card:nth-child(16n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+.projects .cards .card:nth-child(17n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 5.1s;
+          animation-delay: 5.1s;
+}
+.projects .cards .card:nth-child(18n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 5.4s;
+          animation-delay: 5.4s;
+}
+.projects .cards .card:nth-child(19n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 5.7s;
+          animation-delay: 5.7s;
+}
+.projects .cards .card:nth-child(20n) {
+  -webkit-animation: appear 1s ease both;
+          animation: appear 1s ease both;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
 .projects .cards {
   margin-top: 3rem;
   display: grid;
@@ -217,7 +382,7 @@ header nav .icons .filter-green:hover {
   width: 320px;
   height: 160px;
   perspective: 1000px;
-  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
 }
 .projects .cards .card .card-inner {
   position: relative;
@@ -226,12 +391,14 @@ header nav .icons .filter-green:hover {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .projects .cards .card .card-inner .card-front, .projects .cards .card .card-inner .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .projects .cards .card .card-inner .card-back {
@@ -260,6 +427,126 @@ header nav .icons .filter-green:hover {
   width: 320px;
 }
 
+.contact {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .left-col .form {
+  margin-top: 2rem;
+  max-width: 800px;
+  min-width: 500px;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas: "n n e e" "t t t t" "b b b b" ". . . s";
+}
+.contact .left-col .form .input {
+  display: block;
+}
+.contact .left-col .form .input label {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+.contact .left-col .form .input .shaking {
+  -webkit-animation: shake 0.4s;
+          animation: shake 0.4s;
+}
+@-webkit-keyframes shake {
+  25% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+@keyframes shake {
+  25% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+.contact .left-col .form .input input, .contact .left-col .form .input textarea {
+  color: white;
+  font-size: 1.2em;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  outline: none;
+  border: none;
+  background-color: #242323;
+  border: 1px solid #1a1a1a;
+  transition: border 0.3s ease-in-out;
+  width: 100%;
+}
+.contact .left-col .form .input input:focus, .contact .left-col .form .input textarea:focus {
+  border: 1px solid #54b3d6;
+}
+.contact .left-col .form .input input::-moz-placeholder, .contact .left-col .form .input textarea::-moz-placeholder {
+  color: #ff4d4d;
+}
+.contact .left-col .form .input input:-ms-input-placeholder, .contact .left-col .form .input textarea:-ms-input-placeholder {
+  color: #ff4d4d;
+}
+.contact .left-col .form .input input::placeholder, .contact .left-col .form .input textarea::placeholder {
+  color: #ff4d4d;
+}
+.contact .left-col .form .input textarea {
+  font-size: 1.3em;
+  min-height: 250px;
+}
+.contact .left-col .form .name-input {
+  grid-area: n;
+}
+.contact .left-col .form .email-input {
+  grid-area: e;
+}
+.contact .left-col .form .subject-input {
+  grid-area: t;
+}
+.contact .left-col .form .message-input {
+  grid-area: b;
+}
+.contact .left-col .form .message-input textarea {
+  resize: vertical;
+}
+.contact .left-col .form .submit-btn {
+  grid-area: s;
+}
+.contact .left-col .form .submit-btn button {
+  padding: 0.6rem 3rem;
+  border: 1px solid #54b3d6;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, box-shadow 0.6s ease-in;
+}
+.contact .left-col .form .submit-btn button:hover {
+  box-shadow: inset 180px 0 0 0 #54b3d6;
+  color: white;
+}
+.contact .right-col {
+  margin-left: 2rem;
+  margin-right: 5rem;
+  transition: opacity 1s ease-in-out;
+}
+.contact .right-col h1 {
+  color: #00b300;
+}
+.contact .right-col div {
+  margin-top: 1rem;
+}
+.contact .right-col div p {
+  line-height: 1.6rem;
+  font-size: 1.2em;
+}
+
 li {
   list-style: none;
 }
@@ -286,6 +573,11 @@ main {
   width: 100%;
 }
 
+.main {
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
+}
+
 .home {
   width: 100%;
 }
@@ -295,25 +587,121 @@ main {
   margin-top: 4rem;
   width: 85%;
 }
+@-webkit-keyframes sk {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  25% {
+    transform: scaleY(0.8) scaleX(0.8);
+  }
+  100% {
+    transform: scaleY(1.1) scaleX(1.1);
+  }
+}
+@keyframes sk {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  25% {
+    transform: scaleY(0.8) scaleX(0.8);
+  }
+  100% {
+    transform: scaleY(1.1) scaleX(1.1);
+  }
+}
+.home .introduction .full-name .animated {
+  -webkit-animation: sk 0.6s cubic-bezier(0.09, 1.9, 0.81, 1.9);
+          animation: sk 0.6s cubic-bezier(0.09, 1.9, 0.81, 1.9);
+}
+.home .introduction .full-name .name:nth-child(1) {
+  -webkit-animation-delay: 0.77s;
+          animation-delay: 0.77s;
+}
+.home .introduction .full-name .name:nth-child(2) {
+  -webkit-animation-delay: 0.84s;
+          animation-delay: 0.84s;
+}
+.home .introduction .full-name .name:nth-child(3) {
+  -webkit-animation-delay: 0.91s;
+          animation-delay: 0.91s;
+}
+.home .introduction .full-name .name:nth-child(4) {
+  -webkit-animation-delay: 0.98s;
+          animation-delay: 0.98s;
+}
+.home .introduction .full-name .name:nth-child(5) {
+  -webkit-animation-delay: 1.05s;
+          animation-delay: 1.05s;
+}
+.home .introduction .full-name .name:nth-child(6) {
+  -webkit-animation-delay: 1.12s;
+          animation-delay: 1.12s;
+}
+.home .introduction .full-name .name:nth-child(7) {
+  -webkit-animation-delay: 1.19s;
+          animation-delay: 1.19s;
+}
+.home .introduction .full-name .name:nth-child(8) {
+  -webkit-animation-delay: 1.26s;
+          animation-delay: 1.26s;
+}
+.home .introduction .full-name .name:nth-child(9) {
+  -webkit-animation-delay: 1.33s;
+          animation-delay: 1.33s;
+}
+.home .introduction .full-name .name:nth-child(10) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.home .introduction .full-name .name:nth-child(11) {
+  -webkit-animation-delay: 1.47s;
+          animation-delay: 1.47s;
+}
+.home .introduction .full-name .name:nth-child(12) {
+  -webkit-animation-delay: 1.54s;
+          animation-delay: 1.54s;
+}
+.home .introduction .full-name .name:nth-child(13) {
+  -webkit-animation-delay: 1.61s;
+          animation-delay: 1.61s;
+}
+.home .introduction .full-name .name:nth-child(14) {
+  -webkit-animation-delay: 1.68s;
+          animation-delay: 1.68s;
+}
+.home .introduction .full-name .name:nth-child(15) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+.home .introduction .full-name .name:nth-child(16) {
+  -webkit-animation-delay: 1.82s;
+          animation-delay: 1.82s;
+}
+.home .introduction .full-name .name:nth-child(17) {
+  -webkit-animation-delay: 1.89s;
+          animation-delay: 1.89s;
+}
+.home .introduction .full-name .name:nth-child(18) {
+  -webkit-animation-delay: 1.96s;
+          animation-delay: 1.96s;
+}
+.home .introduction .full-name .name:nth-child(19) {
+  -webkit-animation-delay: 2.03s;
+          animation-delay: 2.03s;
+}
+.home .introduction .full-name .name:nth-child(20) {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
 .home .introduction .speech .name {
+  display: inline-block;
   color: #2aa1ff;
   font-size: 4em;
   font-weight: 1000;
+  transition: transform 0.6s cubic-bezier(0.09, 1.9, 0.81, 1.9);
 }
-.home .introduction .speech .name span {
-  display: inline-block;
-}
-.home .introduction .speech .name .translate {
-  transition: transform 0.8s cubic-bezier(0.4, 1.71, 1, 2.5);
-}
-.home .introduction .speech .name .translate:hover {
-  transform: translateY(-16px);
-}
-.home .introduction .speech .name .scale {
-  transition: transform 0.8s ease-out;
-}
-.home .introduction .speech .name .scale:hover {
-  transform: scaleY(0.7);
+.home .introduction .speech .name:hover {
+  transform: scaleY(0.6) scaleX(0.85);
 }
 .home .introduction .speech h2 {
   font-size: 2em;
@@ -329,11 +717,17 @@ main {
   text-decoration: none;
   color: white;
   transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in;
+  transition: color 0.3s ease-in-out, box-shadow 0.6s ease-in;
   display: inline-block;
   margin-top: 1rem;
+  font-size: 1.1em;
 }
 .home .introduction .speech a:hover {
   box-shadow: inset 130px 0 0 0 #54b3d6;
+  color: white;
+}
+.home .introduction .speech a:hover {
+  box-shadow: inset 250px 0 0 0 #54b3d6;
   color: white;
 }
 .home .introduction img {
@@ -390,10 +784,15 @@ main {
   text-decoration: none;
   color: white;
   transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in;
+  transition: color 0.3s ease-in-out, box-shadow 0.6s ease-in;
   display: inline-block;
   margin-top: 2rem;
 }
 .home .about .right-col a:hover {
   box-shadow: inset 130px 0 0 0 #54b3d6;
+  color: white;
+}
+.home .about .right-col a:hover {
+  box-shadow: inset 200px 0 0 0 #54b3d6;
   color: white;
 }/*# sourceMappingURL=index.css.map */

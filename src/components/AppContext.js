@@ -1,13 +1,13 @@
 import React, {createContext} from 'react';
 
-const {Provider, Consumer} = createContext()
+const AppContext = createContext()
 
 function AppContextProvider(props) {
     return (
-        <Provider value={props.value}>
+        <AppContext.Provider value={props.value}>
             {props.children}
-        </Provider>
+        </AppContext.Provider>
     )
 }
 
-export {AppContextProvider, Consumer as AppContextConsumer}
+export {AppContextProvider, AppContext}

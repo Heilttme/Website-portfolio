@@ -30,6 +30,10 @@ main{
     width: 100%;
 }
 
+.main{
+    animation: appear 1s ease-in-out;
+}
+
 .home{
     width: 100%;
 
@@ -39,30 +43,42 @@ main{
         margin-top: 4rem;
         width: 85%;
 
+        @keyframes sk {
+            0%{
+                transform: scaleY(1) scaleX(1);
+            }
+
+            25%{
+                transform: scaleY(.8) scaleX(.8);
+            }
+
+            100%{
+                transform: scaleY(1.1) scaleX(1.1);
+            }
+        }
+
+        .full-name .animated{
+            animation: sk .6s cubic-bezier(.09,1.9,.81,1.9);
+        }
+
+        @for $i from 1 through 20 {
+            .full-name .name:nth-child(#{$i}) {
+                animation-delay:(#{$i*0.07s + .7s}); 
+            }
+        }
+        
         .speech{
+
             .name{
+                display: inline-block;
                 color: #2aa1ff;
                 font-size: 4em;
                 font-weight: 1000;
 
-                span{
-                    display: inline-block;
-                }
-
-                .translate{
-                    transition: transform .8s cubic-bezier(.4,1.71,1,2.5);
-                    
-                    &:hover{
-                        transform: translateY(-16px);
-                    }
-                }
-
-                .scale{
-                    transition: transform .8s ease-out;
-                    
-                    &:hover{
-                        transform: scaleY(.7);
-                    }
+                transition: transform .6s cubic-bezier(.09,1.9,.81,1.9);
+                
+                &:hover{
+                    transform: scaleY(.6) scaleX(.85);
                 }
             }
         
@@ -77,8 +93,10 @@ main{
             
             a{
                 @include button-style;
+                @include button-style-hover(#54b3d6, .6s, 250px);
                 display: inline-block;
                 margin-top: 1rem;
+                font-size: 1.1em;
             }
             
         }
@@ -144,6 +162,7 @@ main{
 
             a{
                 @include button-style;
+                @include button-style-hover(#54b3d6, .6s, 200px);
                 display: inline-block;
                 margin-top: 2rem;
             }

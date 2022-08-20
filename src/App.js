@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppContextProvider } from './components/AppContext';
 import Navigation from "./components/Navigation"
 import Home from './components/Home';
@@ -10,8 +10,10 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 
 function App() {
+  const [language, setLanguage] = useState(navigator.language || navigator.userLanguage)
+
   return (
-    <AppContextProvider value="">
+    <AppContextProvider value={{language, setLanguage}}>
       <Router>
         <div className="app">
             <Navigation/>
