@@ -23,8 +23,8 @@ html, body, * {
 }
 header {
   position: fixed;
-  height: 100vh;
-  height: -webkit-fill-available;
+  height: 115vh;
+  padding-bottom: 15vh;
   background-color: #242323;
   transition: all 0.4s ease-in-out;
   z-index: 100;
@@ -143,7 +143,9 @@ header nav .toggled .switch .ball {
     white-space: nowrap;
   }
   .opened {
-    width: 100vw;
+    padding-right: 2.5vw;
+    width: 105vw;
+    margin: 0 auto;
   }
   .opened .logo {
     width: 100%;
@@ -212,19 +214,19 @@ header nav .toggled .switch .ball {
   .opened .nav {
     width: 70%;
   }
-  .opened li .active {
+  .opened .nav li .active {
     box-shadow: none;
     box-shadow: inset 230px 0 0 0.09px #54b3d6;
   }
-  .opened li a {
+  .opened .nav li a {
     transition: none;
     box-shadow: none;
     transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in;
   }
-  .opened li a:hover {
+  .opened .nav li a:hover {
     box-shadow: none;
   }
-  .opened li a:hover {
+  .opened .nav li a:hover {
     box-shadow: inset 230px 0 0 0.09px #54b3d6;
     color: white;
   }
@@ -545,7 +547,7 @@ header nav .toggled .switch .ball {
   width: 320px;
   height: 160px;
   perspective: 1000px;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 10px 12px rgba(97, 96, 96, 0.18);
 }
 .projects .cards .card .card-inner {
   position: relative;
