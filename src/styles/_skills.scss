@@ -1,4 +1,6 @@
 .skills{
+    padding: 2rem 6rem;
+    
     @for $i from 1 through 3 {
         .cards .card:nth-child(#{$i}n){
             animation: appear 1s ease both;
@@ -15,7 +17,6 @@
             position: absolute;
             font-size: 1.1em;
             top: 2rem;
-            left: 1rem;
             opacity: 0;
             transition: all .5s .1s ease-in;
             line-height: 1.7rem;
@@ -130,3 +131,74 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .skills{
+        padding-inline: 1rem;
+
+        .cards{
+            justify-content: space-between;
+
+            .card{
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .skills{
+        padding-inline: 2rem;
+
+        .cards{
+
+            .card{
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .skills{
+        .cards{
+            flex-direction: column;
+
+            .card{
+                min-height: 760px;
+                width: 60%;
+                margin: 2rem auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .skills{
+
+        .cards{
+
+            .card{
+                width: 80%;
+                margin: 3rem auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .skills{
+
+        .cards{
+
+            .card{
+                width: 105%;
+
+                .image-container{
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+}
+

@@ -1,8 +1,9 @@
 header{
     position: fixed;
     height: 100vh;
+    height: -webkit-fill-available;
     background-color: #242323;
-    transition: all .6s ease-in-out;
+    transition: all .4s ease-in-out;
     z-index: 100;
 
     .logo{
@@ -35,7 +36,7 @@ header{
                 margin-top: 2rem;
 
                 .active{
-                    box-shadow: inset 130px 0 0 0 #54b3d6;
+                    box-shadow: inset 130px 0 0 0.09px #54b3d6;
                     color: white;
                 }
 
@@ -130,6 +131,17 @@ header{
 @media (max-width: 1200px) {
     .closed{
         transform: translateX(-100%);
+    
+        .nav{
+            width: 50%;
+            margin: 0 auto;
+
+            li{
+                a{
+                    white-space: nowrap;
+                }
+            }
+        }
     }
 
     .opened{
@@ -144,21 +156,20 @@ header{
             margin: 0 auto;
             
             li{
-                width: 100%;
-            
+
                 .active{
-                    box-shadow: inset 500px 0 0 0 #54b3d6;
-                    color: white;
+                    box-shadow: none;
+                    box-shadow: inset 500px 0 0 0.09px #54b3d6;
                 }
 
                 a{
-                    text-decoration: none;
-                    width: 80%;
-                    color: #a6a6a6;
-                    display: inline-block;
-                    padding-block: .75rem;
-                    border-block: 1px solid rgba(140, 140, 140, .4);
-                    @include button-style-hover(#54b3d6, .5s, 500px);
+                    white-space: nowrap;
+                    
+                    &:hover{
+                        box-shadow: none;
+                    }
+                    transition: none;
+                    @include button-style-hover(#54b3d6, .3s, 500px);
                 }
             }
         }
@@ -166,5 +177,103 @@ header{
 }
 
 @media (max-width: 850px) {
+    .opened{
+
+        .nav{
+            
+            li{
+                .active{
+                    box-shadow: none;
+                    box-shadow: inset 350px 0 0 0.09px #54b3d6;
+                }
+
+                a{
+                    &:hover{
+                        box-shadow: none;
+                    }
+                    transition: none;
+                    box-shadow: none;
+                    @include button-style-hover(#54b3d6, .3s, 350px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .opened{
+
+        .nav{
+            
+            li{
+                .active{
+                    box-shadow: none;
+                    box-shadow: inset 300px 0 0 0.09px #54b3d6;
+                }
+
+                a{
+                    &:hover{
+                        box-shadow: none;
+                    }
+                    transition: none;
+                    box-shadow: none;
+                    @include button-style-hover(#54b3d6, .3s, 300px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .closed{
+        .nav{
+            width: 70%;
+        }
+    }
     
+    
+    .opened{
+
+        .nav{
+            width: 70%;
+        }
+
+        li{
+            .active{
+                box-shadow: none;
+                box-shadow: inset 230px 0 0 0.09px #54b3d6;
+            }
+
+            a{
+                &:hover{
+                    box-shadow: none;
+                }
+                transition: none;
+                box-shadow: none;
+                @include button-style-hover(#54b3d6, .3s, 230px);
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .opened{
+        .nav{
+            li{
+                .active{
+                    box-shadow: none;
+                    box-shadow: inset 210px 0 0 0.09px #54b3d6;
+                }
+    
+                a{
+                    &:hover{
+                        box-shadow: none;
+                    }
+                    transition: none;
+                    box-shadow: none;
+                    @include button-style-hover(#54b3d6, .4s, 210px);
+                }
+            }
+        }
+    }
 }

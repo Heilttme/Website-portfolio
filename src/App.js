@@ -18,10 +18,10 @@ function App() {
     <AppContextProvider value={{language, setLanguage}}>
       <Router>
         <div className="app">
-            <div onClick={() => toggleMenu(prev => !prev)} class="wrapper-hamburger">
-                <div class="hamburger-menu"></div>
+            <div onClick={() => toggleMenu(prev => !prev)} className="wrapper-hamburger">
+                <div className="hamburger-menu"></div>
             </div>
-            <Navigation menuOpened={menuOpened}/>
+            <Navigation menuOpened={menuOpened} toggleMenu={() => toggleMenu(prev => !prev)}/>
           <main>
             <Routes>
               <Route path="/" element={<Home/>} />

@@ -2,110 +2,117 @@
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+    padding: 2rem 6rem;
 
     .left-col{
         
-            .form{
-                margin-top: 2rem;
-                max-width: 800px;
-                min-width: 500px;
-                display: grid;
-                grid-gap: 2rem;
-                grid-template-areas: 
-                    "n n e e"
-                    "t t t t"
-                    "b b b b"
-                    ". . . s";
-                
-                .input{
-                    display: block;
-        
-                    label{
-                        display: inline-block;
-                        margin-bottom: .4rem;
-                    }
-        
-                    .shaking{
-                        @keyframes shake {
-                            25%{
-                                transform: translateX(6px);
-                            }
-                            50%{
-                                transform: translateX(-6px);
-                            }
-                            75%{
-                                transform: translateX(6px);
-                            }
+        .form{
+            margin-top: 2rem;
+            max-width: 800px;
+            min-width: 500px;
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-areas: 
+                "n n e e"
+                "t t t t"
+                "b b b b"
+                ". . . s";
+            
+            .input{
+                display: block;
+    
+                label{
+                    display: inline-block;
+                    margin-bottom: .4rem;
+                }
+    
+                .shaking{
+                    @keyframes shake {
+                        25%{
+                            transform: translateX(6px);
                         }
-                        
-                        animation: shake .4s;
-                    }
-        
-                    input, textarea{
-                        color: white;
-                        font-size: 1.2em;
-                        border-radius: 4px;
-                        padding: .8rem 1.5rem;
-                        outline: none;
-                        border: none;
-                        background-color: #242323;
-                        border: 1px solid #1a1a1a;
-                        transition: border .3s ease-in-out;
-                        width: 100%;
-                        
-                        &:focus{
-                            border: 1px solid #54b3d6;
+                        50%{
+                            transform: translateX(-6px);
                         }
-                        
-                        &::placeholder{
-                            color: #ff4d4d;
+                        75%{
+                            transform: translateX(6px);
                         }
                     }
-        
-                    textarea{
-                        font-size: 1.3em;
-                        min-height: 250px;
-                    }
-                }
-        
-                .name-input{
-                    grid-area: n;
-                }
-        
-                .email-input{
-                    grid-area: e;
-                }
-        
-                .subject-input{
-                    grid-area: t;
-                }
-        
-                .message-input{
-                    grid-area: b;
                     
-                    textarea{
-                        resize: vertical;
+                    animation: shake .4s;
+                }
+    
+                input, textarea{
+                    font-family: Nunuito;
+
+                    color: white;
+                    font-size: 1.2em;
+                    border-radius: 4px;
+                    padding: .8rem 1.5rem;
+                    outline: none;
+                    border: none;
+                    background-color: #242323;
+                    border: 1px solid #1a1a1a;
+                    transition: border .3s ease-in-out;
+                    width: 100%;
+                    
+                    &:focus{
+                        border: 1px solid #54b3d6;
+                    }
+                    
+                    &::placeholder{
+                        color: #ff4d4d;
                     }
                 }
-        
-                .submit-btn{
-                    grid-area: s;
-        
-                    button{
-                        padding: .6rem 3rem;
-                        border: 1px solid #54b3d6;
-                        color: white;
-                        background: transparent;
-                        cursor: pointer;
-                        @include button-style-hover(#54b3d6, .6s, 180px)
-                    }
+    
+                textarea{
+                    font-size: 1.3em;
+                    min-height: 250px;
+                }
+
+                input::placeholder{
+                    font-size: .8em;
+                }
+            }
+    
+            .name-input{
+                grid-area: n;
+            }
+    
+            .email-input{
+                grid-area: e;
+            }
+    
+            .subject-input{
+                grid-area: t;
+            }
+    
+            .message-input{
+                grid-area: b;
+                
+                textarea{
+                    resize: vertical;
+                }
+            }
+    
+            .submit-btn{
+                grid-area: s;
+    
+                button{
+                    padding: .6rem 3rem;
+                    border: 1px solid #54b3d6;
+                    color: white;
+                    background: transparent;
+                    cursor: pointer;
+                    @include button-style-hover(#54b3d6, .6s, 180px)
                 }
             }
         }
+    }
     
     .right-col{
-        margin-left: 2rem;
-        margin-right: 5rem;
+        margin-left: 8rem;
+        margin-right: 0rem;
         transition: opacity 1s ease-in-out;
 
 
@@ -121,5 +128,147 @@
                 font-size: 1.2em;
             }
         }
+    }
+}
+
+@media (max-width: 1450px) {
+    .contact{
+
+        .left-col{
+
+            .form{
+                .input{
+                    input::placeholder{
+                        font-size: .7em;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .contact{
+        flex-direction: column;
+
+        .right-col{
+            margin-top: 3rem;
+            margin-left: 0rem;
+            padding-bottom: 10rem;
+            transition: opacity 1s ease-in-out;
+        }
+    }
+}
+
+
+@media (max-width: 850px) {
+    .contact{
+        .left-col{
+        
+            .form{
+                grid-template-areas: 
+                    "n n n n"
+                    "e e e e"
+                    "t t t t"
+                    "b b b b"
+                    "s s s s";
+            }
+
+            .submit-btn{
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .contact{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+    
+        .left-col{
+            
+            .form{
+                max-width: 500px;
+                min-width: unset;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .contact{
+        padding-inline: 2rem;
+
+        .left-col{
+            h1{
+                font-size: 1.6em;
+            }
+
+            .form{
+                .input{
+                    input::placeholder, textarea::placeholder{
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+
+        .right-col{
+            .thank{
+                h1{
+                    font-size: 1.6em;
+                }
+
+                div{
+                    p{
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .contact{
+        padding-inline: 1rem;
+
+        .left-col{
+            h1{
+                font-size: 1.3em;
+            }
+            
+            .form{
+                width: 230px;
+                
+                .input{
+                    input, textarea{
+                        width: 230px;
+                    }
+
+                    textarea::placeholder{
+                        font-size: 1em;
+                    }
+
+                    input::placeholder{
+                        font-size: .67em;
+                    } 
+                }
+
+                .submit-btn{
+                    width: 100%;
+                    
+                    button{
+                        padding: .6rem 2rem;
+                    }
+                }
+            }
+        }
+
     }
 }

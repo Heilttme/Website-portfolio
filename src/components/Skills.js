@@ -46,6 +46,7 @@ export default function Skills(props) {
                         <div className="skills-container">
                             <ul>
                                 <li>JavaScript</li>
+                                <li>TypeScript</li>
                                 <li>React</li>
                                 <li>Styled components</li>
                                 <li>Redux</li>
@@ -118,6 +119,7 @@ export default function Skills(props) {
                         <div className="skills-container">
                             <ul>
                                 <li>JavaScript</li>
+                                <li>TypeScript</li>
                                 <li>React</li>
                                 <li>Styled components</li>
                                 <li>Redux</li>

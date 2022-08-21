@@ -6,11 +6,12 @@ import smartphone from "../images/smartphone.png"
 import server from "../images/server.png"
 import { Link } from "react-router-dom"
 import {AppContext} from "./AppContext"
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Home(props) {
     const nameRef = useRef(null)
     const {language} = useContext(AppContext)
-    const name = language === "en-EN" ? 
+    const name = language.includes("en") ? 
         ['N', 'i', 'k', 'i', 't', 'a', ' ', 'S', 'o', 'r', 'o', 'k', 'i', 'n'] 
             :
         ['Н', 'и', 'к', 'и', 'т', 'а', ' ', 'С', 'о', 'р', 'о', 'к', 'и', 'н']
@@ -18,13 +19,13 @@ export default function Home(props) {
     const nameSpans = name.map(el => {
         if (el !== ' '){
             return (
-                <div className="name">
+                <div key={uuidv4()} className="name">
                     <div>{el}</div>
                 </div>
             ) 
         } else {
             return (
-                <strong> </strong>
+                <strong key={uuidv4()}> </strong>
             ) 
         }
     }) 

@@ -17,7 +17,7 @@ html, body, *{
     transition: color .3s ease-in-out, box-shadow $duration ease-in;
 
     &:hover {
-              box-shadow: inset $width 0 0 0 $color;
+              box-shadow: inset $width 0 0 0.09px $color;
               color: white;
             }
 }

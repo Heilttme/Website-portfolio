@@ -24,12 +24,12 @@ export default function Navigation(props) {
     if (language === 'ru-RU') {
         return (
             <header className={props.menuOpened ? "opened" : "closed"}>
-                <Link to="/" className="logo">@Heilttme</Link>
+                <Link onClick={props.toggleMenu} to="/" className="logo">@Heilttme</Link>
                 <nav>
                     <ul className="nav">
-                        <li><NavLink className={({isActive}) => isActive ? "active" : ""} to="/skills">Мои умения</NavLink></li>
-                        <li><NavLink className={({isActive}) => isActive ? "active" : ""} to="/projects">Мои проекты</NavLink></li>
-                        <li><NavLink className={({isActive}) => isActive ? "active" : ""} to="/contact">Связь со мной</NavLink></li>
+                        <li onClick={props.toggleMenu}><NavLink className={({isActive}) => isActive ? "active" : ""} to="/skills">Мои умения</NavLink></li>
+                        <li onClick={props.toggleMenu}><NavLink className={({isActive}) => isActive ? "active" : ""} to="/projects">Мои проекты</NavLink></li>
+                        <li onClick={props.toggleMenu}><NavLink className={({isActive}) => isActive ? "active" : ""} to="/contact">Связь со мной</NavLink></li>
                     </ul>
                     <ul className="icons">
                         <li><a href="https://instagram.com/nekitouss?igshid=YmMyMTA2M2Y="><img className="filter-green" src={instagram}/></a></li>
@@ -48,12 +48,12 @@ export default function Navigation(props) {
     } else {
         return (
             <header className={props.menuOpened ? "opened" : "closed"}>
-                <Link to="/" className="logo">@Heilttme</Link>
+                <Link onClick={props.toggleMenu} to="/" className="logo">@Heilttme</Link>
                 <nav>
                     <ul className="nav">
-                        <li><NavLink className={({isActive}) => isActive ? "active" : ""} to="/skills">My skills</NavLink></li>
-                        <li><NavLink className={({isActive}) => isActive ? "active" : ""} to="/projects">My projects</NavLink></li>
-                        <li><NavLink className={({isActive}) => isActive ? "active" : ""} to="/contact">Contact me</NavLink></li>
+                        <li onClick={props.toggleMenu}><NavLink className={({isActive}) => isActive ? "active" : ""} to="/skills">My skills</NavLink></li>
+                        <li onClick={props.toggleMenu}><NavLink className={({isActive}) => isActive ? "active" : ""} to="/projects">My projects</NavLink></li>
+                        <li onClick={props.toggleMenu}><NavLink className={({isActive}) => isActive ? "active" : ""} to="/contact">Contact me</NavLink></li>
                     </ul>
                     <ul className="icons">
                         <li><a href="https://instagram.com/nekitouss?igshid=YmMyMTA2M2Y="><img className="filter-green" src={instagram}/></a></li>
