@@ -887,8 +887,8 @@ li {
 }
 
 body {
-  -webkit-animation: appear 3s ease-in-out;
-          animation: appear 3s ease-in-out;
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
   background-color: #1a1a1a;
   color: white;
   font-family: Nunito;
@@ -1110,6 +1110,7 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+  position: relative;
 }
 .home .about {
   display: grid;
@@ -1169,6 +1170,29 @@ main {
   box-shadow: inset 200px 0 0 0.09px #54b3d6;
   color: white;
 }
+.home .scroll {
+  color: #4feb83;
+  position: absolute;
+  left: -60px;
+  bottom: 80px;
+  animation: shake-scroll 1s infinite alternate-reverse;
+}
+@-webkit-keyframes shake-scroll {
+  0% {
+    transform: translateY(0px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(10px) rotate(90deg);
+  }
+}
+@keyframes shake-scroll {
+  0% {
+    transform: translateY(0px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(10px) rotate(90deg);
+  }
+}
 
 @media (max-width: 1450px) {
   .home .about {
@@ -1207,14 +1231,20 @@ main {
   .app .home .introduction img {
     display: none;
   }
-}
-@media (max-width: 950px) {
-  .app .home .bottom-img {
+  .app .home .bottom-img img {
     transform: scale(0.8);
   }
 }
+@media (max-width: 950px) {
+  .app .home .bottom-img img {
+    transform: scale(0.7);
+  }
+  .app .home .bottom-img .scroll {
+    bottom: 150px;
+  }
+}
 @media (max-width: 800px) {
-  .app .home .bottom-img {
+  .app .home .bottom-img img {
     transform: scale(0.7);
   }
   .app .home .about {
@@ -1224,6 +1254,12 @@ main {
 @media (max-width: 755px) {
   .app .home {
     padding: 2rem 1rem;
+  }
+  .app .home .bottom-img img {
+    margin-left: 5rem;
+  }
+  .app .home .bottom-img .scroll {
+    left: -30px;
   }
 }
 @media (max-width: 660px) {
@@ -1243,8 +1279,11 @@ main {
   .app .home .about .right-col .cards .card:last-child {
     margin-bottom: 1rem;
   }
-  .app .home .bottom-img {
-    transform: scale(0.6);
+  .app .home .bottom-img .scroll {
+    bottom: 180px;
+  }
+  .app .home .bottom-img img {
+    transform: scale(0.55);
   }
 }
 @media (max-width: 500px) {
@@ -1267,8 +1306,13 @@ main {
   .app .home .about .right-col .cards .card:last-child {
     margin-bottom: 1rem;
   }
-  .app .home .bottom-img {
+  .app .home .bottom-img .scroll {
+    bottom: 220px;
+    left: -50px;
+  }
+  .app .home .bottom-img img {
     transform: scale(0.4);
+    margin-left: 4rem;
   }
 }
 @media (max-width: 430px) {
@@ -1301,5 +1345,8 @@ main {
 @media (max-width: 350px) {
   .app .wrapper-hamburger {
     right: 0.5rem;
+  }
+  .app .home .bottom-img .scroll {
+    bottom: 270px;
   }
 }/*# sourceMappingURL=index.css.map */

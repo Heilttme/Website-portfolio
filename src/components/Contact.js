@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useState, useRef, useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
 
 export default function Contact(props) {
@@ -17,6 +17,10 @@ export default function Contact(props) {
     const emailRef = useRef(null)
     const messageRef = useRef(null)
     
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
 
     function changeData(event) {
         let {name, value} = event.target

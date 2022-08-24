@@ -16,6 +16,10 @@ export default function Home(props) {
             :
         ['Н', 'и', 'к', 'и', 'т', 'а', ' ', 'С', 'о', 'р', 'о', 'к', 'и', 'н']
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        }, [])
+
     const nameSpans = name.map(el => {
         if (el !== ' '){
             return (
@@ -70,6 +74,7 @@ export default function Home(props) {
                 </div>
                 <div className="bottom-img">
                     <img src={pc_bg}/>
+                    <div className="scroll">scroll down -&#62;</div>
                 </div>
                 <div className="about">
                     <div className="left-col">
@@ -118,6 +123,7 @@ export default function Home(props) {
                 </div>
                 <div className="bottom-img">
                     <img src={pc_bg}/>
+                    <div className="scroll">scroll down -&#62;</div>
                 </div>
                 <div className="about">
                     <div className="left-col">

@@ -4,13 +4,12 @@
 @import "./projects";
 @import "./contact";
 
-
 li{
     list-style: none;
 }
 
 body{
-    animation: appear 3s ease-in-out;
+    animation: appear 1s ease-in-out;
     background-color: #1a1a1a;
     color: white;
     font-family: Nunito;
@@ -155,6 +154,7 @@ main{
         display: flex;
         justify-content: center;
         margin-top: 5rem;
+        position: relative;
     }
 
     .about{
@@ -214,6 +214,22 @@ main{
         }
     }
 
+    .scroll{
+        @keyframes shake-scroll {
+            0%{
+                transform: translateY(0px) rotate(90deg);
+            }
+            100%{
+                transform: translateY(10px) rotate(90deg);
+            }
+        }
+
+        color: #4feb83;
+        position: absolute;
+        left: -60px;
+        bottom: 80px;
+        animation: shake-scroll 1s infinite alternate-reverse;
+    }
 }
 
 @media (max-width: 1450px) {
@@ -266,13 +282,18 @@ main{
 
 @media (max-width: 1050px) {
     .app{
-
         .home{
             .introduction{
                 width: 95%;
     
                 img{
                     display: none;
+                }
+            }
+            
+            .bottom-img{
+                img{
+                    transform: scale(.8);
                 }
             }
         }
@@ -283,7 +304,13 @@ main{
     .app{
         .home{
             .bottom-img{
-                transform: scale(.8);
+                img{
+                    transform: scale(.7);
+                }
+
+                .scroll{
+                    bottom: 150px;
+                }
             }
         }
     }
@@ -293,7 +320,9 @@ main{
     .app{
         .home{
             .bottom-img{
-                transform: scale(.7);
+                img{
+                    transform: scale(.7);
+                }
             }
 
             .about{
@@ -307,6 +336,17 @@ main{
     .app{
         .home{
             padding: 2rem 1rem;
+        
+            .bottom-img{
+
+                img{
+                    margin-left: 5rem;
+                }
+
+                .scroll{
+                    left: -30px;
+                }
+            }
         }
     }
 }
@@ -344,7 +384,13 @@ main{
             }
 
             .bottom-img{
-                transform: scale(.6);
+                .scroll{
+                    bottom: 180px;
+                }
+
+                img{
+                    transform: scale(.55);
+                }
             }
         }
     }
@@ -387,7 +433,15 @@ main{
             }
             
             .bottom-img{
-                transform: scale(.4);
+                .scroll{
+                    bottom: 220px;
+                    left: -50px;
+                }
+
+                img{
+                    transform: scale(.4);
+                    margin-left: 4rem;
+                }
             }
         }
     }
@@ -441,6 +495,14 @@ main{
     .app{
         .wrapper-hamburger{
             right: .5rem;
+        }
+
+        .home{
+            .bottom-img{
+                .scroll{
+                    bottom: 270px;
+                }
+            }
         }
     }
 }

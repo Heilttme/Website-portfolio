@@ -1,4 +1,4 @@
-import React, {useContext, useRef} from "react";
+import React, {useContext, useRef, useEffect} from "react";
 import { AppContext } from "./AppContext";
 import { Link, NavLink } from "react-router-dom"
 import instagram from '../images/instagram.svg'
@@ -9,6 +9,10 @@ import linkedin from '../images/linkedin.svg'
 export default function Navigation(props) {
     const {language, setLanguage} = useContext(AppContext)
     const switchRef = useRef(null)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     function switchLanguage(){
         if (language === "ru-RU"){

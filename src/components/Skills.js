@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import design from "../images/design.jpg"
 import backend from "../images/backend.png"
 import frontend from "../images/frontend.png"
@@ -6,6 +6,10 @@ import { AppContext } from "./AppContext";
 
 export default function Skills(props) {
     const {language} = useContext(AppContext)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     if (language === 'ru-RU'){
         return (

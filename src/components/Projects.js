@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import forest from "../images/forest.png"
 import bleach from "../images/bleach.png"
 import {AppContext} from "./AppContext"
@@ -7,6 +7,10 @@ import {AppContext} from "./AppContext"
 export default function Projects(props) {
     const {language} = useContext(AppContext)
     
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     if (language === 'ru-RU'){
         return (
             <div className="projects main">
