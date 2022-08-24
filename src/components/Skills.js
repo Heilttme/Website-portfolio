@@ -77,7 +77,7 @@ export default function Skills(props) {
                             </ul>
                             <div className="hidden-text-3">
                                 <p>Backend - моя одержимость.</p>
-                                <p>Я подхожу к Backend'у с ответственностью и сохраняю его шаткую структурую</p>
+                                <p>Я подхожу к Backend'у с ответственностью и сохраняю его шаткую структуру</p>
                             </div>
                         </div>
                     </div>
