@@ -45,8 +45,10 @@ header{
                     width: 80%;
                     color: #a6a6a6;
                     display: inline-block;
-                    padding-block: .75rem;
-                    border-block: 1px solid rgba(140, 140, 140, .4);
+                    padding-top: .75rem;
+                    padding-bottom: .75rem;
+                    border-top: 1px solid rgba(140, 140, 140, .4);
+                    border-bottom: 1px solid rgba(140, 140, 140, .4);
                     @include button-style-hover(#54b3d6, .5s);
                 }
             }
@@ -129,6 +131,10 @@ header{
 }
 
 @media (max-width: 1200px) {
+    header{
+        padding-bottom: 25vh;
+    }
+    
     .closed{
         transform: translateX(-100%);
     

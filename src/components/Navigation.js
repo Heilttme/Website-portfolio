@@ -5,6 +5,7 @@ import instagram from '../images/instagram.svg'
 import telegram from '../images/telegram.svg'
 import github from '../images/github.svg'
 import linkedin from '../images/linkedin.svg'
+import mail from '../images/mail.svg'
 
 export default function Navigation(props) {
     const {language, setLanguage} = useContext(AppContext)

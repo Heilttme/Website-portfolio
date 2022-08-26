@@ -134,6 +134,10 @@ export default function Contact(props) {
                             <button onClick={submitForm}>Отправить</button>
                         </div>
                     </div>
+                    <div className="additional">
+                        <p>Псс... со мной можно связаться через электронную почту:</p>
+                        <a href="mailto:heilttme@yandex.ru">heilttme@yandex.ru</a>
+                    </div>
                 </div>
                 <div style={{opacity: sent ? 1 : 0}} className="right-col">
                         <div className="thank">
@@ -197,6 +201,10 @@ export default function Contact(props) {
                         <div className="submit-btn">
                             <button onClick={submitForm}>Submit</button>
                         </div>
+                    </div>
+                    <div className="additional">
+                        <p>Psst... you can always contact me via e-mail:</p>
+                        <a href="mailto:heilttme@yandex.ru">heilttme@yandex.ru</a>
                     </div>
                 </div>
                 <div style={{opacity: sent ? 1 : 0}} className="right-col">

@@ -108,6 +108,22 @@
                 }
             }
         }
+
+        .additional{
+            margin-top: 2rem;
+            color: #a8a8a8b4;
+
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 1.3em;
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    color: #54b3d6;
+                }
+            }
+        }
     }
     
     .right-col{

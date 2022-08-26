@@ -65,8 +65,10 @@ header nav .nav li a {
   width: 80%;
   color: #a6a6a6;
   display: inline-block;
-  padding-block: 0.75rem;
-  border-block: 1px solid rgba(140, 140, 140, 0.4);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-top: 1px solid rgba(140, 140, 140, 0.4);
+  border-bottom: 1px solid rgba(140, 140, 140, 0.4);
   transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in;
 }
 header nav .nav li a:hover {
@@ -132,6 +134,9 @@ header nav .toggled .switch .ball {
 }
 
 @media (max-width: 1200px) {
+  header {
+    padding-bottom: 25vh;
+  }
   .closed {
     transform: translateX(-100%);
   }
@@ -763,6 +768,19 @@ header nav .toggled .switch .ball {
   box-shadow: inset 180px 0 0 0.09px #54b3d6;
   color: white;
 }
+.contact .left-col .additional {
+  margin-top: 2rem;
+  color: rgba(168, 168, 168, 0.7058823529);
+}
+.contact .left-col .additional a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  transition: all 0.3s ease-in-out;
+}
+.contact .left-col .additional a:hover {
+  color: #54b3d6;
+}
 .contact .right-col {
   margin-left: 8rem;
   margin-right: 0rem;
@@ -882,6 +900,20 @@ header nav .toggled .switch .ball {
     padding: 0.6rem 2rem;
   }
 }
+::-webkit-scrollbar {
+  width: 1.5rem;
+  padding: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #242323;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(26, 26, 26, 0.7);
+  margin: 2px;
+}
+
 li {
   list-style: none;
 }
