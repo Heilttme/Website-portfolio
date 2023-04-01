@@ -1,6 +1,7 @@
 import React, {useContext, useEffect} from "react";
 import forest from "../images/forest.png"
 import bleach from "../images/bleach.png"
+import calierre from "../images/calierre.jpg"
 import {AppContext} from "./AppContext"
 
 
@@ -19,10 +20,20 @@ export default function Projects(props) {
                     <div className="card">
                         <div className="card-inner">
                             <div className="card-front">
+                                <img src={calierre}></img>
+                            </div>
+                            <div className="card-back">
+                                <a target="_blank" href="https://calierre.ru">Перейти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="card-inner">
+                            <div className="card-front">
                                 <img src={forest}></img>
                             </div>
                             <div className="card-back">
-                                <a href="https://github.com/Heilttme/forest-accomodation">Перейти</a>
+                                <a target="_blank" href="https://github.com/Heilttme/forest-accomodation">Перейти</a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +43,7 @@ export default function Projects(props) {
                                 <img src={bleach}></img>
                             </div>
                             <div className="card-back">
-                                <a href="https://github.com/Heilttme/Bleach-Forum-Django">Перейти</a>
+                                <a target="_blank" href="https://github.com/Heilttme/Bleach-Forum-Django">Перейти</a>
                             </div>
                         </div>
                     </div>

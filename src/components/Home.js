@@ -81,7 +81,7 @@ export default function Home(props) {
                         <h1>Обо мне</h1>
                         <p>Я Web-разработчик из России. Я обожаю программирование и дизайн.</p>
                         <p>Охотно идущая навстречу, уверенная, трудолюбивая и организованная личность.</p>
-                        <p>Увлекаюсь аниме, занятием в зале, ворк-аутом и саморазвитием.</p>
+                        <p>Увлекаюсь занятием в зале, ворк-аутом и саморазвитием.</p>
                     </div>
                     <div className="right-col">
                         <div className="cards">
@@ -130,7 +130,7 @@ export default function Home(props) {
                         <h1>About me</h1>
                         <p>I'm a Web Developer located in Russia. I'm passionate about coding and creating design.</p>
                         <p>Approachable, confident, hard-working and well-organised person.</p>
-                        <p>Keen on anime, working out in gym, calisthenics and self-improvement.</p>
+                        <p>Keen on working out in gym, calisthenics and self-improvement.</p>
                     </div>
                     <div className="right-col">
                         <div className="cards">
