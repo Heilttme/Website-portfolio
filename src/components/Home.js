@@ -1,24 +1,20 @@
-import React, {useContext, useEffect, useRef} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import pc_bg from "../images/pc_bg.png"
 import emoji from "../images/emoji.png"
 import monitor from "../images/monitor.png"
 import smartphone from "../images/smartphone.png"
 import server from "../images/server.png"
 import { Link } from "react-router-dom"
-import {AppContext} from "./AppContext"
 import { v4 as uuidv4 } from 'uuid';
+import { t } from "i18next"
 
-export default function Home(props) {
+export default function Home() {
     const nameRef = useRef(null)
-    const {language} = useContext(AppContext)
-    const name = language.includes("en") ? 
-        ['N', 'i', 'k', 'i', 't', 'a', ' ', 'S', 'o', 'r', 'o', 'k', 'i', 'n'] 
-            :
-        ['Н', 'и', 'к', 'и', 'т', 'а', ' ', 'С', 'о', 'р', 'о', 'к', 'и', 'н']
+    const [name, setName] = useState([t('N'), t('i'), t('k'), t('i'), t('t'), t('a'), ' ', t('S'), t('o'), t('r'), t('o'), t('k'), t('i'), t('n')])
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        }, [])
+    }, [])
 
     const nameSpans = name.map(el => {
         if (el !== ' '){
@@ -55,105 +51,54 @@ export default function Home(props) {
 
         }
         
-      }, [])
+    }, [])
 
-    if (language === 'ru-RU'){
-        return (
-            <div className="home main">
-                <div className="introduction">
-                    <div className="speech">
-                        <h2>Привет, меня зовут</h2>
-                        <div ref={nameRef} className="full-name">
-                            {nameSpans}
-                        </div>
-                        <h2>UI/UX Designer, Web Developer</h2>
-                        <p>Я создаю код и дизайн просто и красиво</p>
-                        <Link to="/contact">Связь со мной</Link>
+    return (
+        <div className="home main">
+            <div className="introduction">
+                <div className="speech">
+                    <h2>{t("Hi, I'm")}</h2>
+                    <div ref={nameRef} className="full-name">
+                        {nameSpans}
                     </div>
-                    <img src={emoji}></img>
+                    <h2>{t("Web Developer")}</h2>
+                    <p>{t("I design and code things simple and beautiful")}</p>
+                    <Link to="/contact">{t("Contact me")}</Link>
                 </div>
-                <div className="bottom-img">
-                    <img src={pc_bg}/>
-                    <div className="scroll">пролистай вниз -&#62;</div>
+                <img src={emoji}></img>
+            </div>
+            <div className="bottom-img">
+                <img src={pc_bg}/>
+                <div className="scroll">{t("scroll down -")}&#62;</div>
+            </div>
+            <div className="about">
+                <div className="left-col">
+                    <h1>{t("About me")}</h1>
+                    <p>{t("I'm a Web Developer located in Russia. I'm passionate about coding and creating design.")}</p>
+                    <p>{t("Approachable, confident, hard-working and well-organised person.")}</p>
+                    <p>{t("Keen on working out in gym, calisthenics and self-improvement.")}</p>
                 </div>
-                <div className="about">
-                    <div className="left-col">
-                        <h1>Обо мне</h1>
-                        <p>Я Web-разработчик из России. Я обожаю программирование и дизайн.</p>
-                        <p>Охотно идущая навстречу, уверенная, трудолюбивая и организованная личность.</p>
-                        <p>Увлекаюсь занятием в зале, ворк-аутом и саморазвитием.</p>
-                    </div>
-                    <div className="right-col">
-                        <div className="cards">
-                            <div className="card">
-                                <img src={monitor}/>
-                                <h2>Web design</h2>
-                                <p>Современный UI/UX дизайн</p>
-                            </div>
-                            <div className="card">
-                                <img className="smartphone" src={smartphone}/>
-                                <h2>Responsive design</h2>
-                                <p>Отзывчивый Веб-дизайн для всех платформ</p>
-                            </div>
-                            <div className="card">
-                                <img src={server}/>
-                                <h2>Backend</h2>
-                                <p>Чуточка оптимизированного Backend'а</p>
-                            </div>
+                <div className="right-col">
+                    <div className="cards">
+                        <div className="card">
+                            <img src={monitor}/>
+                            <h2>{t("Web design")}</h2>
+                            <p>{t("Clean and modern UI/UX design")}</p>
                         </div>
-                    <Link to="/skills">Больше информации</Link>
+                        <div className="card">
+                            <img className="smartphone" src={smartphone}/>
+                            <h2>{t("Responsive design")}</h2>
+                            <p>{t("Responsive web design for all platforms")}</p>
+                        </div>
+                        <div className="card">
+                            <img src={server}/>
+                            <h2>{t("Backend")}</h2>
+                            <p>{t("A bit of well-optimised backend")}</p>
+                        </div>
                     </div>
+                <Link to="/skills">{t("Learn more")}</Link>
                 </div>
             </div>
-        )
-    } else {
-        return (
-            <div className="home main">
-                <div className="introduction">
-                    <div className="speech">
-                        <h2>Hi, I'm</h2>
-                        <div ref={nameRef} className="full-name">
-                            {nameSpans}
-                        </div>
-                        <h2>UI/UX Designer, Web Developer</h2>
-                        <p>I design and code things simple and beautiful</p>
-                        <Link to="/contact">Contact me</Link>
-                    </div>
-                    <img src={emoji}></img>
-                </div>
-                <div className="bottom-img">
-                    <img src={pc_bg}/>
-                    <div className="scroll">scroll down -&#62;</div>
-                </div>
-                <div className="about">
-                    <div className="left-col">
-                        <h1>About me</h1>
-                        <p>I'm a Web Developer located in Russia. I'm passionate about coding and creating design.</p>
-                        <p>Approachable, confident, hard-working and well-organised person.</p>
-                        <p>Keen on working out in gym, calisthenics and self-improvement.</p>
-                    </div>
-                    <div className="right-col">
-                        <div className="cards">
-                            <div className="card">
-                                <img src={monitor}/>
-                                <h2>Web design</h2>
-                                <p>Clean and modern UI/UX design</p>
-                            </div>
-                            <div className="card">
-                                <img className="smartphone" src={smartphone}/>
-                                <h2>Responsive design</h2>
-                                <p>Responsive web design for all platforms</p>
-                            </div>
-                            <div className="card">
-                                <img src={server}/>
-                                <h2>Backend</h2>
-                                <p>A bit of well-optimised backend</p>
-                            </div>
-                        </div>
-                    <Link to="/skills">Learn more</Link>
-                    </div>
-                </div>
-            </div>
-        )
-    }
+        </div>
+    )
 }

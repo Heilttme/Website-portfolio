@@ -4,15 +4,6 @@ html, body, * {
   box-sizing: border-box;
 }
 
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes appear {
   0% {
     opacity: 0;
@@ -77,7 +68,7 @@ header nav .nav li a:hover {
 }
 header nav .icons {
   text-align: center;
-  height: 40%;
+  height: 36%;
   margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
@@ -120,7 +111,7 @@ header nav .switch-language-wrapper .switch {
   height: 30px;
 }
 header nav .switch-language-wrapper .switch .ball {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: absolute;
   top: 3px;
   left: 5px;
@@ -258,22 +249,16 @@ header nav .toggled .switch .ball {
   padding: 2rem 6rem;
 }
 .skills .cards .card:nth-child(1n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation: appear 0.8s ease both;
+  animation-delay: 0.3s;
 }
 .skills .cards .card:nth-child(2n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation: appear 0.8s ease both;
+  animation-delay: 0.6s;
 }
 .skills .cards .card:nth-child(3n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: appear 0.8s ease both;
+  animation-delay: 0.9s;
 }
 .skills .cards {
   margin: 4rem auto;
@@ -285,7 +270,7 @@ header nav .toggled .switch .ball {
   font-size: 1.1em;
   top: 2rem;
   opacity: 0;
-  transition: all 0.5s 0.1s ease-in;
+  transition: all 0.3s ease-in;
   line-height: 1.7rem;
 }
 .skills .cards .hidden-text-2 {
@@ -293,7 +278,7 @@ header nav .toggled .switch .ball {
   font-size: 1.1em;
   top: 2rem;
   opacity: 0;
-  transition: all 0.5s 0.1s ease-in;
+  transition: all 0.3s ease-in;
   line-height: 1.7rem;
 }
 .skills .cards .hidden-text-3 {
@@ -301,11 +286,14 @@ header nav .toggled .switch .ball {
   font-size: 1.1em;
   top: 2rem;
   opacity: 0;
-  transition: all 0.5s 0.1s ease-in;
+  transition: all 0.3s ease-in;
   line-height: 1.7rem;
 }
 .skills .cards .card {
   transition: all 0.5s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   text-align: center;
   padding: 3rem 1rem;
   border-radius: 12px;
@@ -337,7 +325,7 @@ header nav .toggled .switch .ball {
   font-size: 1.2em;
 }
 .skills .cards .card:first-child:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .skills .cards .card:first-child:hover ul {
   opacity: 0;
@@ -354,7 +342,7 @@ header nav .toggled .switch .ball {
   padding-bottom: 1rem;
 }
 .skills .cards .card:nth-child(2):hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .skills .cards .card:nth-child(2):hover ul {
   opacity: 0;
@@ -363,7 +351,7 @@ header nav .toggled .switch .ball {
   opacity: 1;
 }
 .skills .cards .card:nth-child(3):hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .skills .cards .card:nth-child(3):hover ul {
   opacity: 0;
@@ -420,124 +408,84 @@ header nav .toggled .switch .ball {
   padding: 2rem 6rem;
 }
 .projects .cards .card:nth-child(1n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation: appear 1s ease both;
+  animation-delay: 0.3s;
 }
 .projects .cards .card:nth-child(2n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation: appear 1s ease both;
+  animation-delay: 0.6s;
 }
 .projects .cards .card:nth-child(3n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation: appear 1s ease both;
+  animation-delay: 0.9s;
 }
 .projects .cards .card:nth-child(4n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: appear 1s ease both;
+  animation-delay: 1.2s;
 }
 .projects .cards .card:nth-child(5n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation: appear 1s ease both;
+  animation-delay: 1.5s;
 }
 .projects .cards .card:nth-child(6n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  animation: appear 1s ease both;
+  animation-delay: 1.8s;
 }
 .projects .cards .card:nth-child(7n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+  animation: appear 1s ease both;
+  animation-delay: 2.1s;
 }
 .projects .cards .card:nth-child(8n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+  animation: appear 1s ease both;
+  animation-delay: 2.4s;
 }
 .projects .cards .card:nth-child(9n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
+  animation: appear 1s ease both;
+  animation-delay: 2.7s;
 }
 .projects .cards .card:nth-child(10n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation: appear 1s ease both;
+  animation-delay: 3s;
 }
 .projects .cards .card:nth-child(11n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 3.3s;
-          animation-delay: 3.3s;
+  animation: appear 1s ease both;
+  animation-delay: 3.3s;
 }
 .projects .cards .card:nth-child(12n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
+  animation: appear 1s ease both;
+  animation-delay: 3.6s;
 }
 .projects .cards .card:nth-child(13n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 3.9s;
-          animation-delay: 3.9s;
+  animation: appear 1s ease both;
+  animation-delay: 3.9s;
 }
 .projects .cards .card:nth-child(14n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 4.2s;
-          animation-delay: 4.2s;
+  animation: appear 1s ease both;
+  animation-delay: 4.2s;
 }
 .projects .cards .card:nth-child(15n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
+  animation: appear 1s ease both;
+  animation-delay: 4.5s;
 }
 .projects .cards .card:nth-child(16n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 4.8s;
-          animation-delay: 4.8s;
+  animation: appear 1s ease both;
+  animation-delay: 4.8s;
 }
 .projects .cards .card:nth-child(17n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 5.1s;
-          animation-delay: 5.1s;
+  animation: appear 1s ease both;
+  animation-delay: 5.1s;
 }
 .projects .cards .card:nth-child(18n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 5.4s;
-          animation-delay: 5.4s;
+  animation: appear 1s ease both;
+  animation-delay: 5.4s;
 }
 .projects .cards .card:nth-child(19n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 5.7s;
-          animation-delay: 5.7s;
+  animation: appear 1s ease both;
+  animation-delay: 5.7s;
 }
 .projects .cards .card:nth-child(20n) {
-  -webkit-animation: appear 1s ease both;
-          animation: appear 1s ease both;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  animation: appear 1s ease both;
+  animation-delay: 6s;
 }
 .projects .cards {
   margin-top: 3rem;
@@ -549,6 +497,9 @@ header nav .toggled .switch .ball {
 }
 .projects .cards .card {
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   width: 320px;
   height: 160px;
   perspective: 1000px;
@@ -559,7 +510,7 @@ header nav .toggled .switch .ball {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: transform 0.54s ease-in-out;
   transform-style: preserve-3d;
 }
 .projects .cards .card .card-inner .card-front, .projects .cards .card .card-inner .card-back {
@@ -586,7 +537,7 @@ header nav .toggled .switch .ball {
   padding: 0.6rem 2rem;
   border-radius: 12px;
   border: 1px solid rgb(0, 9, 26);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .projects .cards .card .card-inner .card-back a:hover {
   background-color: #54b3d6;
@@ -675,19 +626,7 @@ header nav .toggled .switch .ball {
   margin-bottom: 0.4rem;
 }
 .contact .left-col .form .input .shaking {
-  -webkit-animation: shake 0.4s;
-          animation: shake 0.4s;
-}
-@-webkit-keyframes shake {
-  25% {
-    transform: translateX(6px);
-  }
-  50% {
-    transform: translateX(-6px);
-  }
-  75% {
-    transform: translateX(6px);
-  }
+  animation: shake 0.4s;
 }
 @keyframes shake {
   25% {
@@ -719,9 +658,6 @@ header nav .toggled .switch .ball {
 .contact .left-col .form .input input::-moz-placeholder, .contact .left-col .form .input textarea::-moz-placeholder {
   color: #ff4d4d;
 }
-.contact .left-col .form .input input:-ms-input-placeholder, .contact .left-col .form .input textarea:-ms-input-placeholder {
-  color: #ff4d4d;
-}
 .contact .left-col .form .input input::placeholder, .contact .left-col .form .input textarea::placeholder {
   color: #ff4d4d;
 }
@@ -730,9 +666,6 @@ header nav .toggled .switch .ball {
   min-height: 250px;
 }
 .contact .left-col .form .input input::-moz-placeholder {
-  font-size: 0.8em;
-}
-.contact .left-col .form .input input:-ms-input-placeholder {
   font-size: 0.8em;
 }
 .contact .left-col .form .input input::placeholder {
@@ -799,13 +732,10 @@ header nav .toggled .switch .ball {
 
 @media (max-width: 1450px) {
   .contact .left-col .form .input input::-moz-placeholder {
-    font-size: 0.7em;
-  }
-  .contact .left-col .form .input input:-ms-input-placeholder {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   .contact .left-col .form .input input::placeholder {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 @media (max-width: 1200px) {
@@ -849,9 +779,6 @@ header nav .toggled .switch .ball {
   .contact .left-col .form .input input::-moz-placeholder, .contact .left-col .form .input textarea::-moz-placeholder {
     font-size: 0.8em;
   }
-  .contact .left-col .form .input input:-ms-input-placeholder, .contact .left-col .form .input textarea:-ms-input-placeholder {
-    font-size: 0.8em;
-  }
   .contact .left-col .form .input input::placeholder, .contact .left-col .form .input textarea::placeholder {
     font-size: 0.8em;
   }
@@ -878,16 +805,10 @@ header nav .toggled .switch .ball {
   .contact .left-col .form .input textarea::-moz-placeholder {
     font-size: 1em;
   }
-  .contact .left-col .form .input textarea:-ms-input-placeholder {
-    font-size: 1em;
-  }
   .contact .left-col .form .input textarea::placeholder {
     font-size: 1em;
   }
   .contact .left-col .form .input input::-moz-placeholder {
-    font-size: 0.67em;
-  }
-  .contact .left-col .form .input input:-ms-input-placeholder {
     font-size: 0.67em;
   }
   .contact .left-col .form .input input::placeholder {
@@ -901,7 +822,7 @@ header nav .toggled .switch .ball {
   }
 }
 ::-webkit-scrollbar {
-  width: 1.5rem;
+  width: 24px;
   padding: 10px;
 }
 
@@ -919,25 +840,35 @@ li {
 }
 
 body {
-  -webkit-animation: appear 1s ease-in-out;
-          animation: appear 1s ease-in-out;
+  animation: appear 1s ease-in-out;
   background-color: #1a1a1a;
   color: white;
   font-family: Nunito;
 }
 
+.no-scroll {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .app {
   display: flex;
   position: relative;
+  --toastify-color-dark: #3f3f3f !important;
 }
 .app .wrapper-hamburger {
   cursor: pointer;
-  padding: 1rem;
+  padding: 20px;
   position: fixed;
-  right: 2rem;
-  top: 2rem;
+  right: 40px;
+  top: 36px;
+  width: 64px;
+  height: 48px;
   z-index: 1000000;
   display: none;
+  border-radius: 8px;
 }
 .app .wrapper-hamburger .hamburger-menu {
   width: 28px;
@@ -950,7 +881,7 @@ body {
   position: absolute;
   width: 23px;
   height: 3px;
-  top: 24px;
+  top: 28px;
   background-color: white;
   border-radius: 8px;
 }
@@ -959,46 +890,34 @@ body {
   position: absolute;
   width: 28px;
   height: 3px;
-  top: 8px;
+  top: 12px;
   background-color: white;
   border-radius: 8px;
 }
 
 header {
-  width: 10rem;
+  width: 160px;
 }
 
 main {
-  margin-left: 10rem;
+  margin-left: 160px;
   width: 100%;
 }
 
 .main {
-  -webkit-animation: appear 1s ease-in-out;
-          animation: appear 1s ease-in-out;
+  animation: appear 1s ease-in-out;
 }
 
 .home {
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 32px 64px;
 }
 .home .introduction {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 64px;
   width: 90%;
-}
-@-webkit-keyframes sk {
-  0% {
-    transform: scaleY(1) scaleX(1);
-  }
-  25% {
-    transform: scaleY(0.8) scaleX(0.8);
-  }
-  100% {
-    transform: scaleY(1.1) scaleX(1.1);
-  }
 }
 @keyframes sk {
   0% {
@@ -1012,87 +931,66 @@ main {
   }
 }
 .home .introduction .full-name .animated {
-  -webkit-animation: sk 0.6s cubic-bezier(0.09, 1.9, 0.81, 1.9);
   animation: sk 0.6s cubic-bezier(0.09, 1.9, 0.81, 1.9);
 }
 .home .introduction .full-name .name:nth-child(1) {
-  -webkit-animation-delay: 0.77s;
   animation-delay: 0.77s;
 }
 .home .introduction .full-name .name:nth-child(2) {
-  -webkit-animation-delay: 0.84s;
   animation-delay: 0.84s;
 }
 .home .introduction .full-name .name:nth-child(3) {
-  -webkit-animation-delay: 0.91s;
   animation-delay: 0.91s;
 }
 .home .introduction .full-name .name:nth-child(4) {
-  -webkit-animation-delay: 0.98s;
   animation-delay: 0.98s;
 }
 .home .introduction .full-name .name:nth-child(5) {
-  -webkit-animation-delay: 1.05s;
   animation-delay: 1.05s;
 }
 .home .introduction .full-name .name:nth-child(6) {
-  -webkit-animation-delay: 1.12s;
   animation-delay: 1.12s;
 }
 .home .introduction .full-name .name:nth-child(7) {
-  -webkit-animation-delay: 1.19s;
   animation-delay: 1.19s;
 }
 .home .introduction .full-name .name:nth-child(8) {
-  -webkit-animation-delay: 1.26s;
   animation-delay: 1.26s;
 }
 .home .introduction .full-name .name:nth-child(9) {
-  -webkit-animation-delay: 1.33s;
   animation-delay: 1.33s;
 }
 .home .introduction .full-name .name:nth-child(10) {
-  -webkit-animation-delay: 1.4s;
   animation-delay: 1.4s;
 }
 .home .introduction .full-name .name:nth-child(11) {
-  -webkit-animation-delay: 1.47s;
   animation-delay: 1.47s;
 }
 .home .introduction .full-name .name:nth-child(12) {
-  -webkit-animation-delay: 1.54s;
   animation-delay: 1.54s;
 }
 .home .introduction .full-name .name:nth-child(13) {
-  -webkit-animation-delay: 1.61s;
   animation-delay: 1.61s;
 }
 .home .introduction .full-name .name:nth-child(14) {
-  -webkit-animation-delay: 1.68s;
   animation-delay: 1.68s;
 }
 .home .introduction .full-name .name:nth-child(15) {
-  -webkit-animation-delay: 1.75s;
   animation-delay: 1.75s;
 }
 .home .introduction .full-name .name:nth-child(16) {
-  -webkit-animation-delay: 1.82s;
   animation-delay: 1.82s;
 }
 .home .introduction .full-name .name:nth-child(17) {
-  -webkit-animation-delay: 1.89s;
   animation-delay: 1.89s;
 }
 .home .introduction .full-name .name:nth-child(18) {
-  -webkit-animation-delay: 1.96s;
   animation-delay: 1.96s;
 }
 .home .introduction .full-name .name:nth-child(19) {
-  -webkit-animation-delay: 2.03s;
   animation-delay: 2.03s;
 }
 .home .introduction .full-name .name:nth-child(20) {
-  -webkit-animation-delay: 2.1s;
   animation-delay: 2.1s;
 }
 .home .introduction .speech .full-name {
@@ -1112,7 +1010,7 @@ main {
   font-size: 2em;
 }
 .home .introduction .speech p {
-  margin-top: 1rem;
+  margin-top: 16px;
   font-size: 1.3em;
 }
 .home .introduction .speech a {
@@ -1124,7 +1022,7 @@ main {
   transition: color 0.3s ease-in-out, box-shadow 0.5s ease-in;
   transition: color 0.3s ease-in-out, box-shadow 0.6s ease-in;
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 16px;
   font-size: 1.1em;
 }
 .home .introduction .speech a:hover {
@@ -1141,7 +1039,7 @@ main {
 .home .bottom-img {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 80px;
   position: relative;
 }
 .home .about {
@@ -1208,14 +1106,6 @@ main {
   left: -60px;
   bottom: 80px;
   animation: shake-scroll 1s infinite alternate-reverse;
-}
-@-webkit-keyframes shake-scroll {
-  0% {
-    transform: translateY(0px) rotate(90deg);
-  }
-  100% {
-    transform: translateY(10px) rotate(90deg);
-  }
 }
 @keyframes shake-scroll {
   0% {
@@ -1319,6 +1209,10 @@ main {
   }
 }
 @media (max-width: 500px) {
+  .app .wrapper-hamburger {
+    cursor: pointer;
+    right: 20px;
+  }
   .app .home .introduction .speech h2 {
     font-size: 1.2em;
   }
@@ -1375,9 +1269,6 @@ main {
   }
 }
 @media (max-width: 350px) {
-  .app .wrapper-hamburger {
-    right: 0.5rem;
-  }
   .app .home .bottom-img .scroll {
     bottom: 280px;
   }

@@ -19,6 +19,7 @@
         
         .card{
             position: relative;
+            user-select: none;
             width: 320px;
             height: 160px;
             perspective: 1000px;
@@ -29,7 +30,7 @@
                 width: 100%;
                 height: 100%;
                 text-align: center;
-                transition: transform 0.8s;
+                transition: transform 0.54s ease-in-out;
                 transform-style: preserve-3d;
 
                 .card-front, .card-back {
@@ -39,7 +40,7 @@
                     -webkit-perspective: 0;
                     -webkit-backface-visibility: hidden;
                     -webkit-transform: translate3d(0,0,0);
-                    visibility:visible;
+                    visibility: visible;
                     backface-visibility: hidden;
                 }
     
@@ -57,7 +58,7 @@
                         padding: .6rem 2rem;
                         border-radius: 12px;
                         border: 1px solid rgb(0, 9, 26);
-                        transition: all .6s ease-in-out;
+                        transition: all .25s ease-in-out;
 
                         &:hover{
                             background-color: #54b3d6;
