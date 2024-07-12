@@ -22,7 +22,6 @@ export default function Navigation({menuOpened, toggleMenu, language, changeLang
                     <li onClick={() => toggleMenu(false)}><NavLink className={({isActive}) => isActive ? "active" : ""} to="/contact">{t("Contact me")}</NavLink></li>
                 </ul>
                 <ul className="icons">
-                    <li><a target="_blank" href="https://instagram.com/nekitouss?igshid=YmMyMTA2M2Y="><img className="filter-green" src={instagram}/></a></li>
                     <li><a target="_blank" href="https://t.me/Heilttme"><img className="filter-green" src={telegram}/></a></li>
                     <li><a target="_blank" href="https://github.com/Heilttme"><img className="filter-green" src={github}/></a></li>
                     {/* <li><a href="https://www.linkedin.com/in/nikita-sorokin-b40433249/"><img className="filter-green" src={linkedin}/></a></li> */}

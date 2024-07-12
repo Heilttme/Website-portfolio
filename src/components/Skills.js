@@ -48,7 +48,9 @@ export default function Skills({language}) {
                             <li>TypeScript</li>
                             <li>React</li>
                             <li>Redux</li>
-                            <li>Zustand</li>
+                            <li>Effector</li>
+                            <li>Webpack</li>
+                            <li>Jest</li>
                             <li>Git</li>
                         </ul>
                         <div className="hidden-text-2">

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.06224222.css",
+    "main.js": "/static/js/main.c276ec61.js",
+    "static/media/forest.png": "/static/media/forest.ebed66ab7563afbf563d.png",
+    "static/media/lootmakers.jpg": "/static/media/lootmakers.0b66d40d1f7e35207f39.jpg",
+    "static/media/server.png": "/static/media/server.f7b15beb49d5226add08.png",
+    "static/media/monitor.png": "/static/media/monitor.249b4da146d6199f7c88.png",
+    "static/media/smartphone.png": "/static/media/smartphone.184d471e62b6bc6e85a0.png",
+    "static/media/calierre.jpg": "/static/media/calierre.1c1f400ea300aecd7d7c.jpg",
+    "static/media/emoji.png": "/static/media/emoji.d1a4036d411468c1c460.png",
+    "static/media/frontend.png": "/static/media/frontend.f805de69aeed93de7026.png",
+    "static/media/pc_bg.png": "/static/media/pc_bg.265161c74bbeada847d8.png",
+    "static/media/backend.png": "/static/media/backend.1169604cfeedd9f58bba.png",
+    "static/media/instagram.svg": "/static/media/instagram.20b72bc4f26bfd252b27d9c1ae27328f.svg",
+    "static/media/telegram.svg": "/static/media/telegram.981ec96cc931446bf5aa6f442abb1254.svg",
+    "static/media/github.svg": "/static/media/github.a89b80e722802391414e67c86dea13ae.svg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.06224222.css.map": "/static/css/main.06224222.css.map",
+    "main.c276ec61.js.map": "/static/js/main.c276ec61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06224222.css",
+    "static/js/main.c276ec61.js"
+  ]
+}
